@@ -1,0 +1,22 @@
+{
+  "name": "simulate",
+  "version": "1.0.0",
+  "description": "模拟 API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cike8899/simulate.git"
+  },
+  "keywords": [
+    "simulate"
+  ],
+  "author": "billchen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cike8899/simulate/issues"
+  },
+  "homepage": "https://github.com/cike8899/simulate#readme"
+}
