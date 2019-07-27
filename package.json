@@ -4,7 +4,7 @@
   "description": "模拟 API",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest --watch"
   },
   "repository": {
     "type": "git",
