@@ -79,7 +79,7 @@ describe('test promise', () => {
       });
   });
 
-  test('static function', () => {
+  test('static function resolve reject', () => {
     expect.assertions(2);
     const resolveInstance = Promise.resolve('geek');
     resolveInstance.then(res => {
@@ -97,4 +97,31 @@ describe('test promise', () => {
     // Promise.race
     // Promise.once
   });
+
+  test('static function all', () => {
+    expect.assertions(1);
+    const instanceOne = new Promise((resolve, reject) => {
+      setTimeout(() => {
+        resolve('ret1');
+      });
+    });
+    const instanceTwo = new Promise((resolve, reject) => {
+      setTimeout(() => {
+        resolve('ret2');
+      }, 1000);
+    });
+
+    // return expect(Promise.all([instanceOne, instanceTwo])).resolves.toEqual([
+    //   'ret1',
+    //   'ret2'
+    // ]);
+
+    // 上面方式也可以通过
+
+    return Promise.all([instanceOne, instanceTwo]).then(ret => {
+      expect(ret).toEqual(['ret1', 'ret2']);
+    });
+  });
+  test('static function race', () => {});
+  test('static function once', () => {});
 });
